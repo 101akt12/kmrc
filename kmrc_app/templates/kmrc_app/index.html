@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>KMRC</title>
+
+   <!-- Slider only -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+  <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'kmrc_app\images\bootstrap.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="{% static 'kmrc_app\images\jquery.min.js.download"></script>
+	<script src="{% static 'kmrc_app\images\bootstrap.min.js.download"></script>
+	<link rel="stylesheet" href="{% static 'kmrc_app\images\font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{% static 'kmrc_app\images\font-awesome.min(2).css">
+    <link rel="stylesheet" type="text/css" href="{% static 'kmrc_app/css/metro.css' %}">
+
+    <script type="text/javascript">
+     	filterSelection("all") // Execute the function and show all columns
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+// Show filtered elements
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+     </script>
+</head>
+<body>
+	
+  <div class="row" style="margin-top :0px padding :0px;height: 40px;background-color: #ADD8E6;font-size: 25px;cursor: default;margin-left: 0px;margin-right: 0px;">
+
+    <div class="col-lg-7 col-sm-7" style="margin-top:-12px;font-size:40px;padding-right: 0px;padding-left: 0px;">
+      <b style="font-family: verdana;">𝓚𝓜𝓡𝓒</b>
+    </div>
+
+    <div class="col-lg-1 col-sm-1" style="margin-top: 9px;font-size:20px;text-align:center;padding-right: 0px;padding-left: 0px;">
+      <a href="\kmrc_app"><b style="color: black;">Home</b></a>
+    </div>
+
+        <div class="col-lg-1 col-sm-1" style="margin-top: 9px;font-size:20px;text-align:center;padding-left: 0px;padding-right: 0px;">
+          <a   href="/kmrc_app/journey">
+      <b style="color: black;">Journey</b></a>
+    </div>
+
+    <div class="col-lg-1 col-sm-1" style="margin-top: 9px;font-size:20px;text-align:center;padding-left: 0px;padding-right: 0px;">
+      <a href="\kmrc_app\aboutus"><b style="color: black;">About</b></a>
+    </div>
+
+    <div class="col-lg-1 col-sm-1" style="margin-top: 9px;margin-left: 0px;font-size:20px;text-align:center;padding-left: 0px;padding-right: 0px;">
+      <a href="/kmrc_app/help/">
+      <b style="color: black;">Help</b></a>
+    </div>
+
+    <div class="col-lg-1 col-sm-1" style="margin-top: 9px;font-size:20px;text-align:centerpadding-left: 0px;padding-right: 0px;">
+       <a href="/userregister/login"><b style="color: black;">Login</b></a>
+       </div>
+
+
+
+    </div>
+
+     <div class="row" style="padding: 0px;background-color: rgb(240, 154, 154);margin-right: 0px;margin-left: 0px;">
+     	<div class="col-lg-12 col-sm-12" style="font-size: 15PX;margin-top: 10px;color: #040406;padding-left: 0px;padding-right: 0px;">
+     		<b style="font-size: 25px;">कानपुर मेट्रो रेल कॉरपोरेशन लिमिटेड।</b><br>
+     		<b style="font-size: 25px;">KANPUR METRO RAIL CORPORATION LTD. </b>
+     	</div>
+     	
+     </div>
+
+
+
+  <div class="container-fluid">
+          <div class="row " style="padding: 0px;margin-right: -14px;margin-left: -15px;">
+             <div class="col-md-12" style="padding: 0px;">
+              <div id="mycarousel" class="carousel slide" data-ride="carousel">
+                 <ol class="carousel-indicators">
+                    <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#mycarousel" data-slide-to="1" class=""></li>
+                    <li data-target="#mycarousel" data-slide-to="2" class=""></li> 
+                 </ol>
+                 <div class="carousel-inner">
+                    <div class="item next left">
+                       <img src=" {% static 'kmrc_app\images\m12.jpg' %}" style="height:600px;width:100%;;">
+                    </div>
+                    <div class="item">
+                       <img src=" {% static 'kmrc_app\images\m7.jpg' %}" style="height:600px;width:100%;">
+                    </div>
+                    <div class="item active left">
+                       <img src=" {% static 'kmrc_app\images\m12.jpg' %}" style="height:600px;width:100%;">
+                    </div>
+                <a class="carousel-control left carousel-control-prev" href="file:///E:/first%20task/project/metro.html#mycarousel" data-slide="prev">                            
+                </a>
+                <a class="carousel-control right carousel-control-next" href="file:///E:/first%20task/project/metro.html#mycarousel" data-slide="next">
+                  <i class="fa fa-angle-right"></i>               
+                </a>
+                 </div>
+              </div>
+             </div>
+         </div>
+     </div>
+
+
+
+  <!--map-->
+
+     <div class="row" style="margin: 5px;padding: 0px;">
+      <div class="col-sm-12 col-lg-6"style="margin: 0px;padding: 0px;height:420px;">      
+  <div class="mapouter"><div class="gmap_canvas"><iframe width="500" height="420" id="gmap_canvas" src="https://maps.google.com/maps?q=20/7%20Block%2021%20govind%20nagar%20kanpur%20uttar%20pradesh%20208006&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://2piratebay.org"></a><br><style>.mapouter{position:relative;text-align:left;height:500px;width:550px;}</style><a href="https://www.embedgooglemap.net"></a><style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:550px;}</style></div></div>
+      </div>
+
+
+      <div class="col-sm-12 col-lg-6" style="height: 420px;border: 3px solid #808080; border-radius: 10px;font-size: 13px; color: #040406;">
+        <b>The Kanpur Metro is a proposed fast travel framework in the city of Kanpur, India. The plausibility investigation of the venture is progressing by RITES andshould be finished by June 2015. Kanpur Metro Rail is prone to be finished around 2020 (stage 1) if began in 2016. Kanpur is the biggest city in Uttar Pradesh took after by Lucknow and Ghaziabad. This is the biggest mechanical town took after by Ghaziabad in the state. The plausibility investigation of metro rail in Kanpur has been readied to control the activity troubles and blockage which are hampering the development of the City.The proposed Metro Rail course incorporates IIT, Rawatpur, Bada Chauraha, Motimahal, Kanpur Central, ISBT Jhakarkatti and Naubasta. By arrangement, the metro course would start from IIT Kalyanpur-Rawatpur, Mall Road, Phoolbagh, Kanpur Central Station, and transport terminal of Jhakarkati-Kidwai Nagar - by means of Transport Nagar intersection to Naubasta.On this highway, 17 km track would be hoisted and left 8 km would be underground. From IIT to Harsh Nagar, the course should be lifted and from Chunniganj to ISBT Jhakarkatti by means of Parade, Bada Chauraha and Central Station the course will be underground.From Transport Nagar to Naubasta the track will be hoisted.</b>
+      </div>
+      
+     </div>
+<hr>
+
+
+      	<div class="row" style="margin-right: 0px;margin-left: 0px;">
+		<div class="col-lg-12 col-sm-12" style="  height: 600px;">
+			<div class="row" style="margin-left: 0px; margin-right: 0px;">
+				<div class="col-lg-12 col-sm-12" style="height: 50px;">
+				</div>
+			</div>
+			<div class="row" style="margin-left: 0px;margin-right: 0px;">
+				<div class="col-sm-12 col-lg-12" style="border:4px solid black;height: 460px;">
+					<div class="row" style="margin-top: 40px;margin-right: 0px;margin-left: 0px;">
+						<div class="col-lg-3 col-sm-3 col-md-3">
+                    				<img src="{% static 'kmrc_app\images\mv1.png' %}" style="height:300px;width:100%; border-radius: 80px;">
+                    				<div class="row">
+                    					<div class="col-lg-12 col-sm-12" style="background-color:#ADD8E6; height: 30px;width: 70%;margin-left: 40px;margin-top: 6px; border :1px solid black; ">
+                    						<b style=" font-size: 20px;color: black;padding-left: 30px;">Daily pass</b>
+                    					</div>
+                    				</div>
+                            </div>
+                    			<div class="col-lg-3 col-sm-3 col-md-3">
+                    				 <img src="{% static 'kmrc_app\images\mv.png' %}" style="height:300px;width:100%; border-radius: 80px;">
+                                        <div class="row">
+                    					<div class="col-lg-12 col-sm-12" style="background-color:#ADD8E6;; height: 30px;width: 70%;margin-left: 40px;margin-top: 6px; border :1px solid black; ">
+                    						<b style=" font-size: 20px; color: black;padding-left: 15px;">Weekly pass</b>
+                    					</div>
+                    				</div>
+                    			</div>
+                    			<div class="col-lg-3 col-sm-3 col-md-3">
+                    				 <img src="{% static 'kmrc_app\images\mv1.png' %}" style="height:300px;width:100%; border-radius: 80px;">
+                             
+                           <div class="row">
+                    					<div class="col-lg-12 col-sm-12" style="background-color:#ADD8E6;; height: 30px;width: 70%;margin-left: 40px;margin-top: 6px; border :1px solid black; ">
+                    						<b style=" font-size: 20px;color: black;">Monthly pass</b>
+                    					</div>
+                    				</div>
+                            
+                           
+                    			</div>
+                    			<div class="col-lg-3 col-sm-3 col-md-3">
+                    				 <img src="{% static 'kmrc_app\images\mv.png' %}" style="height:300px;width:100%; border-radius: 80px;">
+                            <div class="row">
+                    					<div class="col-lg-12 col-sm-12" style="background-color:#ADD8E6;; height: 30px;width: 70%;margin-left: 40px;margin-top: 6px; border :1px solid black; ">
+                    						<b style=" font-size: 20px;color: black;padding-left: 20px;">Yearly pass</b>
+                    					</div>
+                    				</div>
+                    			</div>
+				
+					</div>
+
+                      <div class="col-lg-12" style="text-align: center; padding-top: 20px;">
+                        <a href="\kmrc_app\viewmore"><input type="submit" name="sign up"  value="View More" style="padding-left: 20px; height: 50px;border-radius: 5px; font-size: 25px; background-color:#ADD8E6;; cursor: pointer; color: black;font-family: Georgia;">
+                        </a>
+                        
+                      </div>
+					</div>
+ 
+          <div>
+            
+          </div>
+				
+			</div>
+		</div>
+	</div>
+
+<div class="row">
+     	<div class="col-lg-12 col-sm-12" style=" font-size :20px;text-align:center;">
+     	<b style="font-size: 50px;">GALLERY</b>
+     	<br>
+
+    </div>
+</div>
+<div id="myBtnContainer" style=" text-align: center;">
+  <button class="btn item active" onclick="filterSelection(&#39;all&#39;)"> Show all</button>
+  <button class="btn" onclick="filterSelection(&#39;METRO&#39;)"> Metro</button>
+  <button class="btn" onclick="filterSelection(&#39;construction&#39;)"> Metro work</button>
+  <button class="btn" onclick="filterSelection(&#39;Routes&#39;)"> Routes</button>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row" style="
+    margin-right: 0px;
+    margin-left: 0px;
+">
+  <div class="column METRO show">
+    <div class="content">
+      <img src="{% static 'kmrc_app\images\kanpur.jpg' %}" style="width:100%;height:400px;">
+     </div>
+  </div>
+  <div class="column METRO show">
+    <div class="content">
+      <img src="{% static 'kmrc_app\images\kanpur1.jpg' %}" style="width:100%;height:400px;">
+    </div>
+  </div>
+  
+  <div class="column METRO show">
+    <div class="content">
+      <img src="{% static 'kmrc_app\images\kanpur2.jpg' %}" style="width:100%;height:400px;">
+    </div>
+  </div>
+  <div class="column METRO show">
+    <div class="content">
+      <img src="{% static 'kmrc_app\images\m24.jpg' %}" style="width:100%;height:400px;">
+    </div>
+  </div>
+   
+  <div class="column METRO show">
+    <div class="content">
+      <img src="{% static 'kmrc_app\images\m26.jpg' %}" style="width:100%;height:400px;">
+    </div>
+  </div>
+  <div class="column METRO show">
+    <div class="content">
+      <img src="{% static 'kmrc_app\images\m20.jpg' %}" style="width:100%;height:400px;">
+    </div>
+  </div>
+ 
+  <div class="column construction show">
+    <div class="content">
+      <img src="{% static 'kmrc_app\images\m22.jpg' %}" style="width:100%;height:400px;">
+    </div>
+  </div>
+  
+
+  <div class="column construction show">
+    <div class="content">
+      <img src="{% static 'kmrc_app\images\m14.jpg' %}" style="width:100%;height:400px;">
+    </div>
+  </div>
+  <div class="column construction show">
+    <div class="content">
+      <img src="{% static 'kmrc_app\images\m16.jpg' %}" style="width:100%;height:400px;">
+    </div>
+  </div>
+  <div class="column construction show">
+    <div class="content">
+      <img src="{% static 'kmrc_app\images\m17.jpg' %}" style="width:100%;height:400px;">
+    </div>
+  </div>
+
+  <div class="column construction show">
+    <div class="content">
+      <img src="{% static 'kmrc_app\images\m25.jpg' %}" style="width:100%;height:400px;">
+    </div>
+  </div>
+  
+
+  <div class="column construction show">
+    <div class="content">
+      <img src="{% static 'kmrc_app\images\m21.jpeg' %}" style="width:100%;height:400px;">
+    </div>
+  </div>
+  
+
+  <div class="column Routes show">
+    <div class="content">
+      <img src="{% static 'kmrc_app\images\m19.png' %}" style="width:100%;height:400px;">
+    </div>
+  </div>
+  <div class="column Routes show">
+    <div class="content">
+      <img src="{% static 'kmrc_app\images\m18.jpg' %}" style="width:100%;height:400px;">
+    </div>
+  </div>
+  <div class="column Routes show">
+    <div class="content">
+      <img src="{% static 'kmrc_app\images\m15.png' %}" style="width:100%;height:400px;">  
+    </div>
+  </div>
+<!-- END GRID -->
+</div>
+<!-- footer -->
+
+<div class="row" style="padding-left: 0px;margin-left: 0px;padding-right: 0px;margin-right: 0px;">
+
+    <div class="col-lg-4 col-sm-4" style=" height:310px; background-color: black; font-size: 15px; color: white;">
+         <b style="font-size: 20px;color: white;">PRIVACY POLICY</b>
+     <div class="row">
+      <div class="col-lg-4 col-sm-4">
+         <hr style="height:2px;border-width:0;color:red;background-color:red">
+      </div>
+      <div class="col-lg-8 col-sm-8">
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-lg-12" style="margin-left: 8px;">
+          <b>It is a Metro Rail website.Its admin is <span style="color: red;">Aman</span> the main purpose of website is Gentrate E-metro pass in few seconds,without going anywhere.For more updates join us on Social Media    </b>
+          
+        </div>
+        
+      </div>
+       <div class="row">
+        <div class="col-lg-12 col-sm-12" style="margin-top: 50px;">
+          <i class="fa fa-facebook-official fa-2x"></i>
+          <i class="fa fa-twitter-square fa-2x" style="margin-left: 30px;"></i>
+          <i class="fa fa-instagram fa-2x" style="margin-left: 30px;"></i>
+          <i class="fa fa-youtube-play fa-2x" style="margin-left: 30px;"></i>
+          
+        </div>
+      </div>
+     </div> 
+    </div>
+
+    
+  <div class="col-lg-4 col-sm-4" style=" height:310px; background-color: black; font-size: 15px; color: white; ">
+         <b style="font-size: 20px;color: white;">ADDRESS</b>
+     <div class="row">
+      <div class="col-lg-4 col-sm-4">
+         <hr style="height:2px;border-width:0;color:red;background-color:red">
+      </div>
+      <div class="col-lg-8 col-sm-8">
+      </div>
+    </div>
+      <div class="row">
+        <div class="col-sm-12 col-lg-12" style="">
+          <i class="fa fa-map-marker fa-2x" style="font-size: 15px;"> Govind Nagar,kanpur</i><br>
+          <i class="fa fa-phone fa-2x" style="font-size: 15px; margin-top: 20px;"> +91-9696503657</i>
+          <i class="fa fa-envelope-o fa-2x" style="font-size: 15px; margin-top: 20px;"> Amanbhalla211@gmail.com</i><br>
+            </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12 col-sm-12" style=" margin-top:100px;">
+                <b>created By <span style="color: red;">Aman</span> |</b>
+                <i class="fa fa-copyright">2021 All rights reserved</i>
+              </div>
+            </div>
+    </div>
+
+    <div class="col-lg-4 col-sm-4" style=" height:310px; background-color: black; font-size: 15px; color: white; ">
+         <b style="font-size: 20px;color: white;">CONTACT US</b>
+     <div class="row" style="padding-left: 0px;margin-left: 0px;padding-right: 0px;margin-right: 0px;">
+      <div class="col-lg-4 col-sm-4">
+         <hr style="height:2px;border-width:0;color:red;background-color:red">
+      </div>
+      <div class="col-lg-8 col-sm-8">
+      </div>
+      <div class="row" style="padding-left: 0px;margin-left: 0px;padding-right: 0px;margin-right: 0px;">
+        <div class="col-sm-12 col-lg-12" style="margin-left: 8px;">
+                  Email*<br>
+                  <input type="text" name="" style=" font-size: 15px;">
+              </div>
+    
+    
+          </div>
+          <div class="row" style="padding-left: 0px;margin-left: 0px;padding-right: 0px;margin-right: 0px;">
+        <div class="col-sm-12 col-lg-12" style="margin-left: 8px; margin-top: 12px;">
+                  Message*<br>
+                  <input type="text" name="" style=" font-size: 15px;">
+              </div>
+          </div>
+          <div class="row" style="padding-left: 0px;margin-left: 0px;padding-right: 0px;margin-right: 0px;">
+        <div class="col-sm-12 col-lg-12" style="margin-left: 8px; margin-top: 20px;">
+                  <input type="button" name="send" value="send" style=" width : 65%; background-color:  red;">
+              </div>
+          </div>
+          
+        </div>
+       </div>
+      </div>
+
+ 
+
+<!-- END footer -->
+
+<script type="text/javascript">
+	$( document ).ready(function() {
+    filterSelection('all');
+});
+	
+</script></div></body></html>
